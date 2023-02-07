@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ListView</string>
+    <string name="modify_data">Modify Data</string>
+    <string name="modify_data_msg">Select Delete to remove an item</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="add">ADD</string>
+    <string name="add_data">ADD DATA</string>
+    <string name="add_data_msg">"Press Three for 3 alphabets Press Four for 4 alphabets press Five for 5 alphabets"</string>
+    <string name="three">Three</string>
+    <string name="four">Four</string>
+    <string name="five">Five</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+</resources>

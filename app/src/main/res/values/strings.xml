@@ -12,4 +12,6 @@
     <string name="five">Five</string>
     <string name="delete">Delete</string>
     <string name="cancel">Cancel</string>
+    <string name="add1">Add 1</string>
+    <string name="add2">Add 2</string>
 </resources>

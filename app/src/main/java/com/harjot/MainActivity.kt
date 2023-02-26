@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
             var alertDialog = AlertDialog.Builder(this)
             alertDialog.setTitle(resources.getString(R.string.add_data))
             alertDialog.setMessage(resources.getString(R.string.add_data_msg))
-            alertDialog.setCancelable(false)
+            
 
             alertDialog.setNeutralButton(resources.getString(R.string.three)){_,_->
                  var result=random(3)
@@ -52,8 +52,6 @@ class MainActivity : AppCompatActivity() {
 
 
             alertDialog.setNegativeButton(resources.getString(R.string.four)){_,_->
-//                arrayList[position] = (arrayList[position].toInt()+2).toString()
-//                arrayAdapter.notifyDataSetChanged()
                 var result=random(4)
                 arrayList.add((result))
                 //to update the list
@@ -62,9 +60,6 @@ class MainActivity : AppCompatActivity() {
 
 
             alertDialog.setPositiveButton(resources.getString(R.string.five)){_,_->
-//                i=0
-//                arrayList.removeAt(position)
-//                arrayAdapter.notifyDataSetChanged()
                 var  result=random(5)
                 arrayList.add((result))
                 //to update the list
@@ -72,26 +67,26 @@ class MainActivity : AppCompatActivity() {
             }
 
             alertDialog.show()
-//            i++
-//            arrayList.add((i).toString())
-//            //to update the list
-//            arrayAdapter.notifyDataSetChanged()
         }
 
         binding.lvListView.setOnItemClickListener { _, _, position, _ ->
             System.out.println(" in click $position")
-            //  arrayList.removeAt(position)
-            //  arrayAdapter.notifyDataSetChanged()
             var alertDialog = AlertDialog.Builder(this)
             alertDialog.setTitle(resources.getString(R.string.modify_data))
             alertDialog.setMessage(resources.getString(R.string.modify_data_msg))
-            alertDialog.setCancelable(false)
 
-            alertDialog.setNegativeButton(resources.getString(R.string.cancel)){_,_->
-                alertDialog.setCancelable(true)
+
+            alertDialog.setNegativeButton(resources.getString(R.string.add1)){_,_->
+                var result= random(1)
+                arrayList[position]+=result
+                arrayAdapter.notifyDataSetChanged()
             }
-            alertDialog.setPositiveButton(resources.getString(R.string.delete)){_,_->
-                var result=""
+            alertDialog.setPositiveButton(resources.getString(R.string.add2)){_,_->
+                var result= random(2)
+                arrayList[position]+=result
+                arrayAdapter.notifyDataSetChanged()
+            }
+            alertDialog.setNeutralButton(resources.getString(R.string.delete)){_,_->
                 arrayList.removeAt(position)
                 arrayAdapter.notifyDataSetChanged()
 

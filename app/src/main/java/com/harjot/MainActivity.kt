@@ -40,7 +40,6 @@ class MainActivity : AppCompatActivity() {
             var alertDialog = AlertDialog.Builder(this)
             alertDialog.setTitle(resources.getString(R.string.add_data))
             alertDialog.setMessage(resources.getString(R.string.add_data_msg))
-            
 
             alertDialog.setNeutralButton(resources.getString(R.string.three)){_,_->
                  var result=random(3)
